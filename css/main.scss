@@ -1,0 +1,35 @@
+html {
+  width: 700%;
+  font-family: sans-serif;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-x: repeat(100vw);
+  scroll-snap-type: x mandatory;
+  padding: 0;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+section {
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  top: 20%;
+  transform: translateY(-20%);
+  text-align: center;
+  color: black;
+  width: 100%;
+  left: 0;
+  font-size: calc(1rem + 3vw);
+}
+
+.float-left-child {
+  float: left;
+}
