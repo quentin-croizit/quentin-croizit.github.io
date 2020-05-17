@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
 $desktop: 840px;
 
 @mixin desktop {
@@ -36,10 +43,6 @@ html {
   }
 }
 
-body {
-  margin: 0;
-}
-
 section {
   padding: 0;
   height: 100vh;
@@ -49,17 +52,24 @@ section {
   text-align: center;
 
   #h1 {
-  position: absolute;
-  top: 20%;
-  transform: translateY(-20%);
-  color: black;
-  width: 100%;
-  left: 0;
-  font-size: calc(1rem + 3vw);
+    position: absolute;
+    top: 20%;
+    transform: translateY(-20%);
+    color: black;
+    width: 100%;
+    left: 0;
+    font-size: calc(1rem + 3vw);
   }
 
 }
 
 .float-left-child {
-  float: left;
+  
+  @include mobile {
+    float: left;
+  }
+
+  @include desktop {
+    float: center;
+  }
 }

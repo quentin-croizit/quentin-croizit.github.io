@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
 html {
   font-family: sans-serif;
   -ms-scroll-snap-type: mandatory;
@@ -31,10 +38,6 @@ html {
   }
 }
 
-body {
-  margin: 0;
-}
-
 section {
   padding: 0;
   height: 100vh;
@@ -55,7 +58,15 @@ section #h1 {
   font-size: calc(1rem + 3vw);
 }
 
-.float-left-child {
-  float: left;
+@media (max-width: 840px) {
+  .float-left-child {
+    float: left;
+  }
+}
+
+@media (min-width: 840px) {
+  .float-left-child {
+    float: center;
+  }
 }
 /*# sourceMappingURL=section.css.map */
