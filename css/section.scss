@@ -1,4 +1,5 @@
 $image-height-max: 35vh;
+$rounded-corner-weight: clamp(0px, 10vh, 25vw);
 
 * {
   margin: 0px;
@@ -29,7 +30,7 @@ html {
   @include mobile {
     width: 700%;
     scroll-snap-points-x: repeat(100vw);
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     white-space: nowrap;
     overflow-y: hidden;
     overflow-x: auto;
@@ -38,7 +39,7 @@ html {
   @include desktop {
     height: 700%;
     scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     white-space: nowrap;
     overflow-y: auto;
     overflow-x: hidden;
@@ -78,8 +79,7 @@ section {
     box-sizing: border-box;
     position: absolute;
     bottom: 0px;
-    border-top-left-radius: clamp(0px, 10vh, 25vw);
-    border-top-right-radius: clamp(0px, 10vh, 25vw);
+    border-radius: $rounded-corner-weight $rounded-corner-weight 0 0;
     max-height: $image-height-max;
     max-width: 100vw;
     object-fit: scale-down;
