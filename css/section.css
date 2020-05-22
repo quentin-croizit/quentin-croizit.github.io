@@ -41,13 +41,13 @@ html {
 }
 
 @media (max-width: 840px) {
-  .float-left-child {
+  .alignement {
     float: left;
   }
 }
 
 @media (min-width: 840px) {
-  .float-left-child {
+  .alignement {
     float: center;
   }
 }
