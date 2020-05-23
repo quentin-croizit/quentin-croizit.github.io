@@ -1,14 +1,12 @@
 function resize()
  {
-    if(isMobile){
-        var heights = window.innerHeight;
-        var divs = document.getElementsByClassName("section");
-        for(var i=0;i<divs.length;i++)
-           divs[i].style.height = heights + "px";
-    }
+      var heights = window.innerHeight;
+      var widths = window.innerWidth;
+      var divs = document.getElementsByClassName("section");
+      for(var i=0;i<divs.length;i++)
+         divs[i].style.height = heights + "px";
+         divs[i].style.widtth = widths + "px";
  }
-
-isMobile = window.matchMedia("(max-width: 840px)");
 
 resize();
 
