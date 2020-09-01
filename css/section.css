@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   font-family: Roboto, sans-serif;
@@ -20,15 +21,43 @@ html, body {
   grid-gap: 0px 0px;
 }
 
-.section__background_black {
+.txt_black {
+  color: black;
+}
+
+.txt_white {
+  color: white;
+}
+
+.txt_pink {
+  color: pink;
+}
+
+.txt_skyblue {
+  color: skyblue;
+}
+
+.txt_lightgreen {
+  color: lightgreen;
+}
+
+.bg_black {
   background-color: black;
 }
 
-.section__background_gray {
-  background-color: gray;
+.bg_white {
+  background-color: white;
 }
 
-.section__background_green {
-  background-color: green;
+.bg_pink {
+  background-color: pink;
+}
+
+.bg_skyblue {
+  background-color: skyblue;
+}
+
+.bg_lightgreen {
+  background-color: lightgreen;
 }
 /*# sourceMappingURL=section.css.map */
