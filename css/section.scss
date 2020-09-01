@@ -1,3 +1,9 @@
+$black: #000000;
+$white: #ffffff;
+$pink: #ffccfb;
+$skyblue: #97f6ff;
+$lightgreen: #97ffa0;
+
 html,
 body {
   margin: 0 0 0 0;
@@ -15,16 +21,22 @@ body {
   display: inline-grid;
   grid-template-columns: 100%;
   grid-gap: 0px 0px;
+
+  &__title {
+    background-color: $pink;
+    color: $white;
+
+    &_text {
+      text-align: center;
+      font-size: 10vw;
+    }
+
+    &_picture {
+      margin: 0 0 10vw 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80vw;
+    }
+  }
 }
-
-.txt_black { color: #000000; }
-.txt_white { color: #ffffff; }
-.txt_pink { color: #ff8ff6; }
-.txt_skyblue { color: #97f6ff; }
-.txt_lightgreen { color: #97ffa0; }
-
-.bg_black { background-color: #000000; }
-.bg_white { background-color: #ffffff; }
-.bg_pink { background-color: #ff8ff6; }
-.bg_skyblue { background-color: #97f6ff; }
-.bg_lightgreen { background-color: #97ffa0; }
