@@ -22,42 +22,42 @@ body {
 }
 
 .txt_black {
-  color: black;
+  color: #000000;
 }
 
 .txt_white {
-  color: white;
+  color: #ffffff;
 }
 
 .txt_pink {
-  color: pink;
+  color: #ff8ff6;
 }
 
 .txt_skyblue {
-  color: skyblue;
+  color: #97f6ff;
 }
 
 .txt_lightgreen {
-  color: lightgreen;
+  color: #97ffa0;
 }
 
 .bg_black {
-  background-color: black;
+  background-color: #000000;
 }
 
 .bg_white {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .bg_pink {
-  background-color: pink;
+  background-color: #ff8ff6;
 }
 
 .bg_skyblue {
-  background-color: skyblue;
+  background-color: #97f6ff;
 }
 
 .bg_lightgreen {
-  background-color: lightgreen;
+  background-color: #97ffa0;
 }
 /*# sourceMappingURL=section.css.map */
