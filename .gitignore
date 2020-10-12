@@ -11,6 +11,7 @@
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
-/website_architecture/*
+/website_architecture/
+*.psd
 
 # End of https://www.gitignore.io/api/visualstudiocode
