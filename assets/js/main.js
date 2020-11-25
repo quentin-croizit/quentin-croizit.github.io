@@ -227,46 +227,51 @@
 		// Lightbox.
 			$('.gallery.lightbox')
 				.on('click', 'a', function(event) {
+					if (true) {
+						console.log($a);
+						//window.open($a.parent.div.ul.li.a.attr('href'));
 
-					var $a = $(this),
-						$gallery = $a.parents('.gallery'),
-						$modal = $gallery.children('.modal'),
-                        $modalImg = $modal.find('img'),
-						href = $a.attr('href');
+					} else {
+						var $a = $(this),
+							$gallery = $a.parents('.gallery'),
+							$modal = $gallery.children('.modal'),
+							$modalImg = $modal.find('img'),
+							href = $a.attr('href');
 
-					// Not an image? Bail.
-						if (!href.match(/\.(jpg|gif|png|mp4)$/))
-							return;
+						// Not an image? Bail.
+							if (!href.match(/\.(jpg|gif|png|mp4)$/))
+								return;
 
-					// Prevent default.
-						event.preventDefault();
-						event.stopPropagation();
+						// Prevent default.
+							event.preventDefault();
+							event.stopPropagation();
 
-					// Locked? Bail.
-						if ($modal[0]._locked)
-							return;
+						// Locked? Bail.
+							if ($modal[0]._locked)
+								return;
 
-					// Lock.
-						$modal[0]._locked = true;
+						// Lock.
+							$modal[0]._locked = true;
 
-					// Set src.
-                        $modalImg.attr('src', href);
+						// Set src.
+							$modalImg.attr('src', href);
 
-					// Set visible.
-						$modal.addClass('visible');
+						// Set visible.
+							$modal.addClass('visible');
 
-					// Focus.
-						$modal.focus();
+						// Focus.
+							$modal.focus();
 
-					// Delay.
-						setTimeout(function() {
+						// Delay.
+							setTimeout(function() {
 
-							// Unlock.
-								$modal[0]._locked = false;
+								// Unlock.
+									$modal[0]._locked = false;
 
-						}, 600);
+							}, 600);
 
-				})
+				}})
+
 				.on('click', '.modal', function(event) {
 
 					var $modal = $(this),
@@ -308,6 +313,7 @@
 						}, 125);
 
 				})
+
 				.on('keypress', '.modal', function(event) {
 
 					var $modal = $(this);
@@ -317,6 +323,7 @@
 							$modal.trigger('click');
 
 				})
+
 				.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src=""/></div></div>')
 					.find('img')
 						.on('load', function(event) {
