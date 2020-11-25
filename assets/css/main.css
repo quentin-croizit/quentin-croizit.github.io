@@ -348,7 +348,8 @@ input, select, textarea {
 	}
 
 	hr {
-		border-bottom-color: rgba(0, 0, 0, 0.2);
+		/* MODIFICATION : border-bottom-color: rgba(0, 0, 0, 0.2) ; */
+		border-bottom-color: rgba(0, 0, 0, 0.8);
 	}
 
 /* Row */
@@ -3663,6 +3664,8 @@ input, select, textarea {
 		position: relative;
 		text-align: center;
 		overflow-x: hidden;
+		/* MODIFICATION */
+		max-height: 100vh;
 	}
 
 		.banner.style2 .content {
@@ -3671,9 +3674,12 @@ input, select, textarea {
 			width: 40rem;
 			max-width: 100%;
 			background-color: inherit;
-			border-radius: 0.5rem;
+			/* MODIFICATION : border-radius: 0.5rem ; */
+			border-radius: 2rem;
 			margin-bottom: 2rem;
 			z-index: 1;
+			/* MODIFICATION */
+			opacity: 90%;
 		}
 
 		.banner.style2 .image {
@@ -4892,7 +4898,7 @@ input, select, textarea {
 			-moz-flex-shrink: 0;
 			-webkit-flex-shrink: 0;
 			-ms-flex-shrink: 0;
-			flex-shrink: 0;
+			flex-shrink: 0; 
 			width: 35%;
 			min-width: 25rem;
 			border-radius: 0;
@@ -5023,7 +5029,7 @@ input, select, textarea {
 
 	.spotlight.style2 {
 		/* MODIFICATION : padding: 7rem 7rem 5rem 7rem ; */
-		padding: 3rem 3rem 1rem 3rem ;
+		padding: 5rem 7rem 5rem 7rem ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -5043,6 +5049,10 @@ input, select, textarea {
 		position: relative;
 		overflow-x: hidden;
 		text-align: left;
+		/* MODIFICATION */
+		margin-bottom: 1rem;
+		/* MODIFICATION */
+		margin-top: 1rem;
 	}
 
 		.spotlight.style2 .content {
@@ -5059,11 +5069,14 @@ input, select, textarea {
 			-webkit-flex-shrink: 0;
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
+			/* MODIFICATION : width: 21rem ; */
 			width: 21rem;
+			/* MODIFICATION : height: 21rem ; */
 			height: 21rem;
 			/*MODIFICATION : border-radius: 100%; */
-			border-radius: 10%;
-			margin: 0 3.5rem 2rem 0;
+			border-radius: 2rem;
+			/*MODIFICATION : margin: 0 3.5rem 2rem 0 ; */
+			margin: 0 3.5rem 0rem 0;
 		}
 
 			.spotlight.style2 .image img {
@@ -5082,10 +5095,17 @@ input, select, textarea {
 				border-radius: 10%;
 			}
 
+			/* MODIFICATION : STARTS HERE */
+			.spotlight.style2 > .content > .icons {
+				margin-bottom: 0;
+			}
+			/* MODIFICATION : ENDS HERE */
+
 		@media screen and (max-width: 1680px) {
 
 			.spotlight.style2 {
-				padding: 5rem 5rem 3rem 5rem ;
+				/* MODIFICATION : padding: 5rem 5rem 3rem 5rem ; */
+				padding: 3rem 5rem 3rem 5rem ;
 			}
 
 		}
@@ -5093,7 +5113,8 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			.spotlight.style2 {
-				padding: 4rem 4rem 2rem 4rem ;
+				/* MODIFICATION : padding: 4rem 4rem 2rem 4rem ; */
+				padding: 2rem 4rem 2rem 4rem ;
 			}
 
 		}
@@ -5101,7 +5122,8 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			.spotlight.style2 {
-				padding: 3.75rem 3rem 1.75rem 3rem ;
+				/* MODIFICATION : padding: 3.75rem 3rem 1.75rem 3rem ; */
+				padding: 2.5rem 3rem 2.5rem 3rem ;
 			}
 
 				.spotlight.style2 .image {
@@ -5114,7 +5136,8 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.spotlight.style2 {
-				padding: 2.5rem 2rem 0.5rem 2rem ;
+				/* MODIFICATION : padding: 2.5rem 2rem 0.5rem 2rem ; */
+				padding: 1rem 2rem 1rem 2rem ;
 				-moz-align-items: -moz-flex-start;
 				-webkit-align-items: -webkit-flex-start;
 				-ms-align-items: -ms-flex-start;
@@ -5129,7 +5152,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (orientation: portrait) {
+		@media screen and (max-width: 736px) and (orientation: portrait) {
 
 			.spotlight.style2 {
 				-moz-align-items: center;
@@ -5146,6 +5169,8 @@ input, select, textarea {
 				.spotlight.style2 .content {
 					width: 34rem;
 					max-width: 100%;
+					/* MODIFICATION */
+					text-align: left;
 				}
 
 				.spotlight.style2 .image {
@@ -6448,9 +6473,11 @@ input, select, textarea {
 			.gallery.style1 input[type="button"].primary,
 			.gallery.style1 button.primary,
 			.gallery.style1 .button.primary {
-				background-color: #ffffff;
+				/* MODIFICATION : background-color: #ffffff ; */
+				background-color: #000000;
 				box-shadow: none;
-				color: #000000 !important;
+				/* MODIFICATION : color: #000000 !important; */
+				color: #ffffff !important;
 			}
 
 				.gallery.style1 input[type="submit"].primary:hover,
@@ -6536,13 +6563,21 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0, 0, 0, 0.5);
+				/* MODIFICATION : width: 100% ; */
+				width: calc(100% - 2rem);
+				/* MODIFICATION : height: 100% ;*/
+				height: calc(100% - 2rem);
+				/* MODIFICATION : background-color: rgba(0, 0, 0, 0.822) ; */
+				background-color: rgba(255, 255, 255, 1);
 				opacity: 0;
-				padding: 2rem;
+				/* MODIFICATION : padding: 2rem ;*/
+				padding: 1rem;
+				/* MODIFICATION */
+				margin: 1rem;
 				z-index: 1;
 				font-size: 0.8rem;
+				/* MODIFICATION */
+				border-radius: 2rem;
 			}
 
 				.gallery.style1 article .caption a {
@@ -6552,7 +6587,15 @@ input, select, textarea {
 				.gallery.style1 article .caption h2, .gallery.style1 article .caption h3, .gallery.style1 article .caption h4, .gallery.style1 article .caption h5, .gallery.style1 article .caption h6 {
 					font-size: 1.25rem;
 					margin-bottom: 0.25rem;
+					/* MODIFICATION */
+					color: #000000;
 				}
+
+				/* MODIFICATION : STARTS HERE */
+				.gallery.style1 article .caption p {
+					color: #000000;
+				}
+				/* MODIFICATION : ENDS HERE */
 
 				.gallery.style1 article .caption > * {
 					max-width: 100%;
@@ -6565,6 +6608,7 @@ input, select, textarea {
 
 			.gallery.style1 article:hover .caption {
 				opacity: 1;
+				box-shadow: 0 0rem 3rem 0 rgba(0, 0, 0, 0.35);
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -7111,6 +7155,11 @@ input, select, textarea {
 		visibility: none;
 		opacity: 0;
 		z-index: 0;
+		padding:5vw;
+		/* MODIFICATION */
+		display: flex;
+		/* MODIFICATION */
+		flex-flow: column;
 	}
 
 		.gallery.lightbox .modal:before {
@@ -7166,14 +7215,34 @@ input, select, textarea {
 			-ms-transition: opacity 0.25s ease, -ms-transform 0.25s ease;
 			transition: opacity 0.25s ease, transform 0.25s ease;
 			opacity: 0;
+			/* MODIFICATION */
+			background-color: rgb(255, 255, 255);
+			/* MODIFICATION */
+			border-radius: 2rem;
+			/* MODIFICATION */
+			padding: 2rem;
+			/* MODIFICATION */
+			max-width: 90vw;
+			/* MODIFICATION */
+			max-height: 90vh;
+			/* MODIFICATION */
+			margin: 1rem;
+			/* MODIFICATION */
+			display: flex;
+			justify-content: center;
 		}
 
-			.gallery.lightbox .modal .inner img {
-				display: block;
-				max-width: 90vw;
-				max-height: 85vh;
-				box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.35);
-			}
+		.gallery.lightbox .modal .inner img {
+			box-shadow: 0 0rem 3rem 0 rgba(0, 0, 0, 0.35);
+			/* MODIFICATION */	
+			max-height: calc(90vh - 5rem);
+			/* MODIFICATION */
+			max-width: calc(90vw - 5rem);
+			/* MODIFICATION */
+			display: flex;
+			/* MODIFICATION */
+			border-radius: 1rem;
+		}
 
 		.gallery.lightbox .modal.visible {
 			pointer-events: auto;
@@ -7206,13 +7275,13 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-	@media screen and (max-width: 980px) {
+	/* @media screen and (max-width: 980px) {
 
 		.gallery.lightbox .modal .inner img {
 			max-width: 100vw;
 		}
 
-	}
+	} */
 
 	.gallery article .image {
 		background-color: rgba(0, 0, 0, 0.125);
@@ -7220,8 +7289,52 @@ input, select, textarea {
 
 /* Wrapper (style1) */
 
+	/* MODIFICATION : STARTS HERE */
+	.gallery-wrapper {
+		padding-bottom: 5rem;
+		margin-bottom: 1rem;
+	}
+
+	@media screen and (max-width: 1680px) {
+		.gallery-wrapper{
+			padding-bottom: 3rem;
+		}
+	}
+
+	@media screen and (max-width: 1280px) {
+		.gallery-wrapper{
+			padding-bottom: 2rem;
+		}
+	}
+
+	@media screen and (max-width: 980px) {
+		.gallery-wrapper{
+			padding-bottom: 2.5rem;
+		}
+	}
+
+	@media screen and (max-width: 736px) {
+		.gallery-wrapper{
+			padding-bottom: 1rem;
+		}
+	}
+
+	.wrapper.style1 > .inner > .title {
+		margin-top: 1rem;
+	}
+
+	.wrapper.style1 > .footer-text {
+		margin-top: 2rem;
+	}
+
+	.wrapper.style1.bottom-divider-margin {
+		margin-bottom: 7rem;
+	}
+	/* MODIFICATION : ENDS HERE */
+
 	.wrapper.style1 > .inner {
-		padding: 7rem 3.5rem 5rem 3.5rem ;
+		/* MODIFICATION : padding: 7rem 3.5rem 5rem 3.5rem ; */
+		padding: 5rem 3.5rem 5rem 3.5rem ;
 		margin: 0 auto;
 		max-width: 100%;
 		width: 64rem;
@@ -7238,7 +7351,8 @@ input, select, textarea {
 	@media screen and (max-width: 1680px) {
 
 		.wrapper.style1 > .inner {
-			padding: 5rem 2.5rem 3rem 2.5rem ;
+		/* MODIFICATION : padding: 5rem 2.5rem 3rem 2.5rem ; */
+			padding: 3rem 2.5rem 3rem 2.5rem ;
 		}
 
 	}
@@ -7246,7 +7360,8 @@ input, select, textarea {
 	@media screen and (max-width: 1280px) {
 
 		.wrapper.style1 > .inner {
-			padding: 4rem 4rem 2rem 4rem ;
+			/* MODIFICATION : padding: 4rem 4rem 2rem 4rem ; */
+			padding: 2rem 4rem 2rem 4rem ;
 		}
 
 	}
@@ -7254,7 +7369,8 @@ input, select, textarea {
 	@media screen and (max-width: 980px) {
 
 		.wrapper.style1 > .inner {
-			padding: 4.5rem 3rem 2.5rem 3rem ;
+			/* MODIFICATION : padding: 4.5rem 3rem 2.5rem 3rem ; */
+			padding: 2.5rem 3rem 2.5rem 3rem ;
 		}
 
 	}
@@ -7262,7 +7378,8 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 		.wrapper.style1 > .inner {
-			padding: 3rem 2rem 1rem 2rem ;
+			/* MODIFICATION : padding: 3rem 2rem 1rem 2rem ; */
+			padding: 1rem 2rem 1rem 2rem ;
 		}
 
 	}
@@ -7271,17 +7388,19 @@ input, select, textarea {
 
 	.wrapper.style2 {
 		padding: 7rem;
-		background-color: #eeeeee;
+		/* MODIFICATION : background-color: #eeeeee ; */
+		background-color: #dddddd;
 	}
 
 		.wrapper.style2 > .inner {
 			padding: 5.25rem 3.5rem 3.25rem 3.5rem ;
 			background-color: #ffffff;
-			border-radius: 0.5rem;
+			/* MODIFICATION : border-radius: 0.5rem ; */
+			border-radius: 2rem 2rem 0rem 0rem;
 			margin: 0 auto;
 			max-width: 100%;
 			position: relative;
-			width: 64rem;
+			/* width: 64rem; */
 			z-index: 1;
 		}
 
@@ -8595,7 +8714,7 @@ input, select, textarea {
 		}
 
 		#wrapper.divided > * {
-			box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.075);
+			/* box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.075); */
 		}
 
 			#wrapper.divided > *:first-child {

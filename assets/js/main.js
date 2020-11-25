@@ -231,7 +231,7 @@
 					var $a = $(this),
 						$gallery = $a.parents('.gallery'),
 						$modal = $gallery.children('.modal'),
-						$modalImg = $modal.find('img'),
+                        $modalImg = $modal.find('img'),
 						href = $a.attr('href');
 
 					// Not an image? Bail.
@@ -250,7 +250,7 @@
 						$modal[0]._locked = true;
 
 					// Set src.
-						$modalImg.attr('src', href);
+                        $modalImg.attr('src', href);
 
 					// Set visible.
 						$modal.addClass('visible');
@@ -284,8 +284,7 @@
 						$modal[0]._locked = true;
 
 					// Clear visible, loaded.
-						$modal
-							.removeClass('loaded')
+						$modal.removeClass('loaded')
 
 					// Delay.
 						setTimeout(function() {
@@ -318,7 +317,7 @@
 							$modal.trigger('click');
 
 				})
-				.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src="" /></div></div>')
+				.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src=""/></div></div>')
 					.find('img')
 						.on('load', function(event) {
 
