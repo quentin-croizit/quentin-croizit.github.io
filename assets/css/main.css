@@ -6619,6 +6619,8 @@ input, select, textarea {
 
 				.gallery.style1 article .caption {
 					padding: 1rem;
+					/* MODIFICATION */
+					transform: scale(0,0);
 				}
 
 		}
@@ -6631,6 +6633,8 @@ input, select, textarea {
 
 				.gallery.style1 article .caption {
 					padding: 1rem;
+					/* MODIFICATION */
+					transform: scale(0,0);
 				}
 
 		}
@@ -6643,6 +6647,8 @@ input, select, textarea {
 
 				.gallery.style1 article .caption {
 					padding: 1rem;
+					/* MODIFICATION */
+					transform: scale(0,0);
 				}
 
 		}
@@ -6997,7 +7003,6 @@ input, select, textarea {
 			.gallery.style2 article .caption {
 				padding: 2rem;
 			}
-
 		}
 
 		@media screen and (max-width: 736px) {
