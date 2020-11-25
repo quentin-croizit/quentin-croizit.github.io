@@ -229,8 +229,6 @@
 				
 				.on('click', 'a', function(event) {
 
-					console.log('salut');
-
 					var $a = $(this),
 						$gallery = $a.parents('.gallery'),
 						$modal = $gallery.children('.modal'),
@@ -254,14 +252,10 @@
 
 					//Mobile OS
 						if(navigator.userAgent.toLowerCase().match(/mobile/i)){
-							console.log('bonjour');
-							window.open('https://www.youtube.com');
+							console.log($a.parent().find('.button').attr('href'));
+							window.open($a.parent().find('.button').attr('href'),"_self");
 							return;
 						}
-						//if(navigator.userAgent.toLowerCase().match(/mobile/i)) {
-							//console.log($gallery.children('.button').attr('href'));
-							//window.open($gallery.children('.button').attr('href'))
-							//return; }
 
 					// Set src.
                         $modalImg.attr('src', href);
