@@ -226,52 +226,61 @@
 
 		// Lightbox.
 			$('.gallery.lightbox')
+				
 				.on('click', 'a', function(event) {
-					if (true) {
-						console.log($a);
-						//window.open($a.parent.div.ul.li.a.attr('href'));
 
-					} else {
-						var $a = $(this),
-							$gallery = $a.parents('.gallery'),
-							$modal = $gallery.children('.modal'),
-							$modalImg = $modal.find('img'),
-							href = $a.attr('href');
+					console.log('salut');
 
-						// Not an image? Bail.
-							if (!href.match(/\.(jpg|gif|png|mp4)$/))
-								return;
+					var $a = $(this),
+						$gallery = $a.parents('.gallery'),
+						$modal = $gallery.children('.modal'),
+                        $modalImg = $modal.find('img'),
+						href = $a.attr('href');
 
-						// Prevent default.
-							event.preventDefault();
-							event.stopPropagation();
+					// Not an image? Bail.
+						if (!href.match(/\.(jpg|gif|png|mp4)$/))
+							return;
 
-						// Locked? Bail.
-							if ($modal[0]._locked)
-								return;
+					// Prevent default.
+						event.preventDefault();
+						event.stopPropagation();
 
-						// Lock.
-							$modal[0]._locked = true;
+					// Locked? Bail.
+						if ($modal[0]._locked)
+							return;
 
-						// Set src.
-							$modalImg.attr('src', href);
+					// Lock.
+						$modal[0]._locked = true;
 
-						// Set visible.
-							$modal.addClass('visible');
+					//Mobile OS
+						if(navigator.userAgent.toLowerCase().match(/mobile/i)){
+							console.log('bonjour');
+							window.open('https://www.youtube.com');
+							return;
+						}
+						//if(navigator.userAgent.toLowerCase().match(/mobile/i)) {
+							//console.log($gallery.children('.button').attr('href'));
+							//window.open($gallery.children('.button').attr('href'))
+							//return; }
 
-						// Focus.
-							$modal.focus();
+					// Set src.
+                        $modalImg.attr('src', href);
 
-						// Delay.
-							setTimeout(function() {
+					// Set visible.
+						$modal.addClass('visible');
 
-								// Unlock.
-									$modal[0]._locked = false;
+					// Focus.
+						$modal.focus();
 
-							}, 600);
+					// Delay.
+						setTimeout(function() {
 
-				}})
+							// Unlock.
+								$modal[0]._locked = false;
 
+						}, 600);
+
+				})
 				.on('click', '.modal', function(event) {
 
 					var $modal = $(this),
@@ -313,7 +322,6 @@
 						}, 125);
 
 				})
-
 				.on('keypress', '.modal', function(event) {
 
 					var $modal = $(this);
@@ -323,7 +331,6 @@
 							$modal.trigger('click');
 
 				})
-
 				.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src=""/></div></div>')
 					.find('img')
 						.on('load', function(event) {
@@ -344,4 +351,5 @@
 
 						});
 
-})(jQuery);
+					})
+(jQuery);
