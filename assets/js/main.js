@@ -232,7 +232,7 @@
 					var $a = $(this),
 						$gallery = $a.parents('.gallery'),
 						$modal = $gallery.children('.modal'),
-                        $modalImg = $modal.find('img'),
+						$modalImg = $modal.find('img'),
 						href = $a.attr('href');
 
 					// Not an image? Bail.
@@ -325,25 +325,25 @@
 							$modal.trigger('click');
 
 				})
-				.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src=""/></div></div>')
-					.find('img')
-						.on('load', function(event) {
+					.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src=""/></div></div>')
+						.find('img')
+							.on('load', function(event) {
 
-							var $modalImg = $(this),
-								$modal = $modalImg.parents('.modal');
+								var $modalImg = $(this),
+									$modal = $modalImg.parents('.modal');
 
-							setTimeout(function() {
+								setTimeout(function() {
 
-								// No longer visible? Bail.
-									if (!$modal.hasClass('visible'))
-										return;
+									// No longer visible? Bail.
+										if (!$modal.hasClass('visible'))
+											return;
 
-								// Set loaded.
-									$modal.addClass('loaded');
+									// Set loaded.
+										$modal.addClass('loaded');
 
-							}, 275);
+								}, 275);
 
-						});
+							});
 
-					})
+						})
 (jQuery);

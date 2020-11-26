@@ -7281,44 +7281,6 @@ input, select, textarea {
 /* Wrapper (style1) */
 
 	/* MODIFICATION : STARTS HERE */
-	.gallery-wrapper {
-		padding-bottom: 5rem;
-		margin-bottom: 1rem;
-		margin-left: 5rem;
-		margin-right: 5rem;
-	}
-
-	@media screen and (max-width: 1680px) {
-		.gallery-wrapper{
-			padding-bottom: 3rem;
-			margin-left: 3rem;
-			margin-right: 3rem;
-		}
-	}
-
-	@media screen and (max-width: 1280px) {
-		.gallery-wrapper{
-			padding-bottom: 2rem;
-			margin-left: 2rem;
-			margin-right: 2rem;
-		}
-	}
-
-	@media screen and (max-width: 980px) {
-		.gallery-wrapper{
-			padding-bottom: 2.5rem;
-			margin-left: 2.5rem;
-			margin-right: 2.5rem;
-		}
-	}
-
-	@media screen and (max-width: 736px) {
-		.gallery-wrapper{
-			padding-bottom: 1rem;
-			margin-left: 1rem;
-			margin-right: 1rem;
-		}
-	}
 
 	.wrapper.style1 > .inner > .title {
 		margin-top: 1rem;
@@ -7330,6 +7292,93 @@ input, select, textarea {
 
 	.wrapper.style1.bottom-divider-margin {
 		margin-bottom: 7rem;
+	}
+
+	.gallery-wrapper {
+		padding-bottom: 5rem;
+		margin-bottom: 1rem;
+		margin-left: 5rem;
+		margin-right: 5rem;
+	}
+
+	.video-wrapper {
+		padding: 5rem 0rem 5rem;
+		margin: 1rem 5rem 1rem;
+		display: grid;
+		grid-column-gap: 5rem;
+		grid-row-gap: 0rem;
+		grid-template: auto / auto auto;
+	}
+
+	.video-wrapper > .video-container {
+		width: 100%;
+		position: relative;
+    	padding-bottom: 56.25%; /* 16:9 */
+		height: 0;
+		overflow:hidden;
+	}
+
+	.embedded-video {
+		position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+	}
+
+	@media screen and (max-width: 1680px) {
+		.gallery-wrapper{
+			padding-bottom: 3rem;
+			margin-left: 3rem;
+			margin-right: 3rem;
+		}
+
+		.video-wrapper {
+			padding: 3rem 0rem 3rem;
+			margin: 1rem 3rem 1rem;
+		}
+	}
+
+	@media screen and (max-width: 1280px) {
+		.gallery-wrapper{
+			padding-bottom: 2rem;
+			margin-left: 2rem;
+			margin-right: 2rem;
+		}
+
+		.video-wrapper {
+			padding: 2rem 0rem 2rem;
+			margin: 1rem 2rem 1rem;
+		}
+	}
+
+	@media screen and (max-width: 980px) {
+		.gallery-wrapper{
+			padding-bottom: 2.5rem;
+			margin-left: 2.5rem;
+			margin-right: 2.5rem;
+		}
+
+		.video-wrapper {
+			padding: 2.5rem 0rem 2.5rem;
+			margin: 1rem 2.5rem 1rem;
+			grid-row-gap: 1.5rem;
+			grid-column-gap: 0rem;
+			grid-template: auto auto / auto;
+		}
+	}
+
+	@media screen and (max-width: 736px) {
+		.gallery-wrapper{
+			padding-bottom: 1rem;
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
+
+		.video-wrapper {
+			padding: 1rem 0rem 1rem;
+			margin: 1rem 1rem 1rem;
+		}
 	}
 	/* MODIFICATION : ENDS HERE */
 
