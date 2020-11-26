@@ -6611,20 +6611,6 @@ input, select, textarea {
 				box-shadow: 0 0rem 3rem 0 rgba(0, 0, 0, 0.35);
 			}
 
-		@media screen and (max-width: 1280px) {
-
-			.gallery.style1 article {
-				width: 33.33333%;
-			}
-
-				.gallery.style1 article .caption {
-					padding: 1rem;
-					/* MODIFICATION */
-					transform: scale(0,0);
-				}
-
-		}
-
 		@media screen and (max-width: 980px) {
 
 			.gallery.style1 article {
@@ -7298,29 +7284,39 @@ input, select, textarea {
 	.gallery-wrapper {
 		padding-bottom: 5rem;
 		margin-bottom: 1rem;
+		margin-left: 5rem;
+		margin-right: 5rem;
 	}
 
 	@media screen and (max-width: 1680px) {
 		.gallery-wrapper{
 			padding-bottom: 3rem;
+			margin-left: 3rem;
+			margin-right: 3rem;
 		}
 	}
 
 	@media screen and (max-width: 1280px) {
 		.gallery-wrapper{
 			padding-bottom: 2rem;
+			margin-left: 2rem;
+			margin-right: 2rem;
 		}
 	}
 
 	@media screen and (max-width: 980px) {
 		.gallery-wrapper{
 			padding-bottom: 2.5rem;
+			margin-left: 2.5rem;
+			margin-right: 2.5rem;
 		}
 	}
 
 	@media screen and (max-width: 736px) {
 		.gallery-wrapper{
 			padding-bottom: 1rem;
+			margin-left: 1rem;
+			margin-right: 1rem;
 		}
 	}
 
