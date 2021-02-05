@@ -7310,6 +7310,11 @@ input, select, textarea {
 		grid-template: auto / auto auto;
 	}
 
+	.video-wrapper-center {
+		grid-column-gap: 0rem;
+		grid-template: auto /  25% 50% 25% ;
+	}
+
 	.video-wrapper > .video-container {
 		width: 100%;
 		position: relative;
@@ -7318,12 +7323,18 @@ input, select, textarea {
 		overflow:hidden;
 	}
 
+	.video-wrapper > .video-container-center {
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+
+
 	.embedded-video {
 		position: absolute;
     	top: 0;
     	left: 0;
     	width: 100%;
-    	height: 100%;
+		height: 100%;
 	}
 
 	@media screen and (max-width: 1680px) {
@@ -8242,7 +8253,8 @@ input, select, textarea {
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		margin: 3rem 0;
+		/* MODIFICATION : margin: 3rem 0 ;*/
+		margin: 0.5rem 0;
 		position: relative;
 	}
 
