@@ -168,7 +168,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 2rem;
+  padding-left: 1rem;
   margin-left: 0.5rem;
   width: 100%;
 }
@@ -185,21 +185,11 @@ img {
 
 @media (min-width: 1280px) {
   .user-photo {
-    height: 80%;
+    height: 100%;
   }
 
-  .user-name {
-    margin-left: 0rem;
-    margin-top: 1rem;
-    height: 15%;
-    padding-left: 0rem;
-  }
-
-  .user-name > h3 {
-    text-align: center;
-    font-size: 1.7rem;
-  }
-
+  .user-name,
+  .user-name > h3,
   .user-name > p {
     position: absolute;
     transform: scale(0, 0);
@@ -215,6 +205,13 @@ img {
   height: 100%;
 }
 
+.user-desc > h3 {
+  position: absolute;
+  transform: scale(0, 0);
+  font-size: 1.7rem;
+  line-height: 120%;
+}
+
 .user-desc > p {
   line-height: 120%;
   font-size: 1rem;
@@ -225,6 +222,11 @@ img {
   .user-desc {
     margin-left: 1rem;
     width: 100%;
+  }
+
+  .user-desc > h3 {
+    position: relative;
+    transform: scale(1, 1);
   }
 }
 
@@ -239,8 +241,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 1rem;
-  margin-right: 1rem;
+  padding-left: 0.5rem;
+  margin-right: 0.5rem;
   width: 100%;
 }
 
@@ -264,6 +266,8 @@ img {
 
   .sponsored-desc {
     width: 100%;
+    padding-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
@@ -287,7 +291,8 @@ img {
     "realeased"
     "school"
     "gamejam"
-    "prototypes";
+    "prototypes"
+    "other";
   grid-gap: 5vw;
   margin: 5vw;
 }
@@ -297,7 +302,9 @@ img {
     grid-template-areas:
       "realeased school"
       "gamejam school"
-      "gamejam prototypes";
+      "gamejam prototypes"
+      "other prototypes";
+    grid-template-rows: auto auto 16rem auto;
   }
 }
 
@@ -347,6 +354,11 @@ img {
 .prototypes {
   height: min-content;
   grid-area: prototypes;
+}
+
+.other {
+  height: min-content;
+  grid-area: other;
 }
 
 .items {

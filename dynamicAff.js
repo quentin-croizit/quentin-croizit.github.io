@@ -2,6 +2,7 @@ var released_projects = false;
 var school_projects = false;
 var gamejam_projects = false;
 var prototypes_projects = false;
+var other_projects = false;
 
 var category = document.getElementById("released-items");
 
@@ -30,6 +31,13 @@ function schoolAff() {
     prototypes_projects = !prototypes_projects;
     category = document.getElementById("prototypes-items");
     if (prototypes_projects) { show(); }
+    else { hide(); }
+  }
+
+  function otherAff() {
+    other_projects = !other_projects;
+    category = document.getElementById("other-items");
+    if (other_projects) { show(); }
     else { hide(); }
   }
 
