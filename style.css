@@ -267,21 +267,20 @@ img {
 }
 
 .sponsored-desc > h3 {
-  padding-left: 0.75rem;
   font-size: 1.25rem;
   line-height: 120%;
-  padding-bottom: 0.5rem;
+  padding: 0.25rem 0rem 0.5rem 0.5rem;
 }
 
 .sponsored-desc > h4 {
-  padding-left: 1rem;
+  padding-left: 0.75rem;
   font-size: 1.15rem;
   line-height: 80%;
   font-weight: 600;
 }
 
 .sponsored-desc > p {
-  padding-left: 1rem;
+  padding-left: 0.75rem;
   font-size: 1rem;
 }
 
