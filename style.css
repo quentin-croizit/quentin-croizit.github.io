@@ -125,6 +125,7 @@ img {
   .header {
     grid-template-areas: "user sponsored";
     grid-template-columns: min-content auto;
+    height: 25vh;
   }
 }
 
@@ -149,7 +150,7 @@ img {
   .user {
     width: 50vw;
     justify-self: start;
-    height: 40vh;
+    height: 25vh;
     flex-direction: row;
   }
 
@@ -208,7 +209,7 @@ img {
 .user-desc > h3 {
   position: absolute;
   transform: scale(0, 0);
-  font-size: 1.7rem;
+  font-size: 3rem;
   line-height: 120%;
 }
 
@@ -222,11 +223,19 @@ img {
   .user-desc {
     margin-left: 1rem;
     width: 100%;
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
   }
 
   .user-desc > h3 {
     position: relative;
     transform: scale(1, 1);
+    padding-bottom: 1rem;
+  }
+
+  .user-desc > p {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-right: 10rem;
   }
 }
 
@@ -235,6 +244,8 @@ img {
   grid-area: sponsored;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
 }
 
 .sponsored-desc {
@@ -251,11 +262,33 @@ img {
   object-fit: contain;
 }
 
+.sponsored-desc {
+  width: 100%;
+}
+
+.sponsored-desc > h3 {
+  padding-left: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 120%;
+  padding-bottom: 0.5rem;
+}
+
+.sponsored-desc > h4 {
+  padding-left: 1rem;
+  font-size: 1.15rem;
+  line-height: 80%;
+  font-weight: 600;
+}
+
+.sponsored-desc > p {
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
 @media (min-width: 1280px) {
   .sponsored {
     width: 100%;
-    height: 40vh;
-    justify-self: end;
+    height: 25vh;
     display: flex;
     flex-direction: row-reverse;
   }
@@ -266,23 +299,24 @@ img {
 
   .sponsored-desc {
     width: 100%;
-    padding-left: 1rem;
+    padding: 2rem;
     margin-right: 1rem;
   }
-}
 
-.sponsored-desc {
-  width: 100%;
-}
+  .sponsored-desc > h3 {
+    font-size: 2.25rem;
+    padding-bottom: 1rem;
+  }
 
-.sponsored-desc > h3 {
-  font-size: 1.8rem;
-  line-height: 120%;
-  padding-left: 0.5rem;
-}
+  .sponsored-desc > h4 {
+    font-size: 1.5rem;
+    line-height: 120%;
+  }
 
-.sponsored-desc > p {
-  padding-left: 1rem;
+  .sponsored-desc > p {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+  }
 }
 
 .categories {
