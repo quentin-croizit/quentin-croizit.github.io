@@ -9,7 +9,6 @@ for(var i = 0 ; i < cell.length ; i++) {
     cell[i].children[2].style.opacity = 0.5;
     cell[i].children[2].style.scale = 0.75;
     cell[i].style.background = "linear-gradient( to right bottom,rgba(255, 255, 255, 0.4),rgba(255, 255, 255, 0.2))";
-    cell[i].children[0].setAttribute('style', 'border-radius: 1rem');
 }
 
 function onHover(){
