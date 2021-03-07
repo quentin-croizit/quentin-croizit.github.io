@@ -47,27 +47,27 @@ main {
 .glass {
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.4)
   );
   backdrop-filter: blur(2rem);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 1.5rem;
   padding: 0.5rem;
-  box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.25);
+  box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.25);
 }
 
 .sub-glass {
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.4)
   );
   backdrop-filter: blur(2rem);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 1rem;
   padding: 0.5rem;
-  box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.125);
+  box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.125);
 }
 
 .weak-glass {
@@ -80,7 +80,7 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 1rem;
   padding: 0.5rem;
-  box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.125);
+  box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.125);
 }
 
 img {
@@ -352,6 +352,24 @@ img {
   max-height: 2.25rem;
 }
 
+@media (min-width: 1280px) {
+  .category-title {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .category-title > object {
+    max-height: 2.25rem;
+  }
+
+  .category-title > h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+}
+
 .category-unwrapped {
   transform: rotate(90deg);
 }
@@ -454,6 +472,59 @@ img {
 @media (min-width: 1280px) {
   .item-desc {
     padding: 1rem;
+  }
+
+  .item-desc > h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .item-desc > hr {
+    display: none;
+  }
+
+  .item-desc > p,
+  .item-desc > p > i {
+    font-size: 1.1rem;
+    line-height: 100%;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .item-desc > p > br {
+    display: none;
+  }
+}
+
+.item-more {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .item-more {
+    display: block;
+    position: fixed;
+    right: 1rem;
+    transition: all 0.5s;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .item-more > h3 {
+    font-size: 0.85rem;
+  }
+
+  .item-more:hover {
+    border-radius: 0.75rem;
+    background: linear-gradient(
+      to right bottom,
+      rgba(101, 142, 198, 0.4),
+      rgba(66, 102, 150, 0.2)
+    );
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.25);
   }
 }
 
