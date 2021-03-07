@@ -20,7 +20,7 @@ function onHover(){
 }
 
 function onOut(){
-    this.children[0].setAttribute('style', 'border-radius: 1rem');
+    this.children[0].removeAttribute('style');
     this.children[0].style.scale = 1;
     this.children[2].style.opacity = 0.5;
     this.children[2].style.scale = 0.75;
