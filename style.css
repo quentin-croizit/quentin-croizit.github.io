@@ -448,6 +448,7 @@ img {
   .item > img {
     height: 100%;
     border-radius: 1.5rem;
+    cursor: pointer;
   }
 }
 
