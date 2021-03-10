@@ -571,6 +571,8 @@ footer {
   grid-template-columns: repeat(5, 3rem);
   grid-template-rows: 3rem;
   margin-bottom: 0.75rem;
+  align-items: center;
+  justify-items: center;
 }
 
 .footer-links > a {
@@ -586,12 +588,11 @@ footer {
 }
 
 .footer-links > a:hover {
-  background: linear-gradient(
-    to right bottom,
-    rgba(101, 142, 198, 0.4),
-    rgba(66, 102, 150, 0.2)
-  );
   transition: all 0.2s;
+  border-radius: 25%;
+  width: 130%;
+  height: 130%;
+  font-size: 2.5rem;
 }
 
 .sub-footer {
