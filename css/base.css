@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right top, #dca7e7, #a3f1ff);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: #426696;
+  font-weight: 600;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+h2,
+p {
+  color: #658ec6;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+h3 {
+  color: #426696;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+h4 {
+  color: #658ec6;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+main {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+.glass {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.4)
+  );
+  backdrop-filter: blur(2rem);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.25);
+}
+
+.sub-glass {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.4)
+  );
+  backdrop-filter: blur(2rem);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.125);
+}
+
+.weak-glass {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(2rem);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.125);
+}
+
+img,
+iframe,
+embed {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  object-fit: cover;
+  border-radius: 1rem;
+  display: block;
+  box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.125);
+  transition: all 0.5s;
+}
+
+@media (min-width: 1280px) {
+  .glass {
+    border-radius: 3rem;
+    padding: 1rem;
+  }
+
+  .sub-glass {
+    border-radius: 2rem;
+    padding: 1rem;
+  }
+
+  .weak-glass {
+    border-radius: 2rem;
+    padding: 1rem;
+  }
+
+  img,
+  iframe,
+  embed {
+    border-radius: 2rem;
+  }
+}

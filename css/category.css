@@ -1,0 +1,120 @@
+.categories {
+  display: grid;
+  grid-template-areas:
+    "realeased"
+    "school"
+    "gamejam"
+    "prototypes"
+    "other";
+  grid-gap: 5vw;
+  margin: 5vw;
+}
+
+@media (min-width: 1280px) {
+  .categories {
+    /* FOR 2 COLUMNS */
+    grid-template-areas:
+      "realeased school"
+      "gamejam school"
+      "gamejam prototypes"
+      "other prototypes";
+    grid-template-rows: 16.5rem 71.5rem 26rem auto;
+    grid-template-columns: 1fr 1fr;
+
+    /* FOR 3 COLUMNS */
+    /* grid-template-areas:
+        "realeased school gamejam"
+        "prototypes school gamejam"
+        "other school gamejam"; */
+    /* grid-template-rows: 16.5rem 35.5rem 30.5rem; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+  }
+}
+
+.category-title {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.category-title > object {
+  max-height: 2.25rem;
+}
+
+@media (min-width: 1280px) {
+  .category-title {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .category-title > object {
+    max-height: 2.25rem;
+  }
+
+  .category-title > h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+}
+
+.category-unwrapped {
+  transform: rotate(90deg);
+}
+
+.category-arrow {
+  pointer-events: none;
+  height: 100%;
+  width: 3rem;
+}
+
+@media (min-width: 1280px) {
+  .category-arrow {
+    position: absolute;
+    transform: scale(0, 0);
+  }
+}
+
+.realeased {
+  height: min-content;
+  grid-area: realeased;
+}
+
+.school {
+  height: min-content;
+  grid-area: school;
+}
+
+.gamejam {
+  height: min-content;
+  grid-area: gamejam;
+}
+
+.prototypes {
+  height: min-content;
+  grid-area: prototypes;
+}
+
+.other {
+  height: min-content;
+  grid-area: other;
+}
+
+.hidden-items {
+  position: absolute;
+  transform: scale(0, 0);
+}
+
+.visible-items {
+  position: relative;
+  transform: scale(1, 1);
+}
+
+@media (min-width: 1280px) {
+  .hidden-items {
+    position: relative;
+    transform: scale(1, 1);
+  }
+}

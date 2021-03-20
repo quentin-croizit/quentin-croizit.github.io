@@ -1,0 +1,140 @@
+.project-information {
+  display: grid;
+  grid-template-areas:
+    "info"
+    "responsabilities"
+    "documents";
+  grid-gap: 5vw;
+  margin: 5vw;
+}
+
+@media (min-width: 1280px) {
+  .project-information {
+    grid-template-areas: "info responsabilities documents";
+    grid-template-columns: 5fr 3fr 3fr;
+  }
+}
+
+.info {
+  grid-area: info;
+  display: grid;
+  grid-template-areas:
+    "resume"
+    "desc";
+  grid-template-rows: min-content min-content;
+  grid-gap: 0.5rem;
+  height: min-content;
+}
+
+.info-resume {
+  grid-area: resume;
+}
+
+.info-resume > h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.info-desc {
+  grid-area: desc;
+}
+
+.responsabilities,
+.documents {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-gap: 0.5rem;
+  height: min-content;
+}
+
+.responsabilities {
+  grid-area: responsabilities;
+}
+
+.documents {
+  grid-area: documents;
+}
+
+.responsabilities-title > h3,
+.documents-title > h3 {
+  line-height: 150%;
+  padding-left: 0.25rem;
+}
+
+.responsabilities-list > p,
+.documents-list > p {
+  line-height: 175%;
+  padding-left: 0.5rem;
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 0.5rem;
+  margin: 5vw;
+}
+
+@media (max-width: 1280px) {
+  .gallery {
+    padding-bottom: 0px;
+  }
+}
+
+.gallery-images {
+  column-gap: 0.5rem;
+}
+
+.one-column {
+  column-count: 1;
+}
+
+.two-column {
+  column-count: 2;
+}
+
+.gallery-images > img {
+  height: inherit;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1280px) {
+  .documents,
+  .responsabilities,
+  .info,
+  .gallery {
+    grid-gap: 1rem;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .gallery-title {
+    display: none;
+  }
+
+  .gallery-images {
+    position: relative;
+    height: 25vh;
+    display: flex;
+    overflow-x: scroll;
+    width: calc(90vw - 2rem);
+    grid-gap: 1rem;
+    border-radius: 2rem;
+  }
+
+  .gallery-images > img {
+    height: calc(25vh - 2rem);
+    width: auto;
+    object-fit: fit;
+    border-radius: 0.5rem;
+    border: none;
+  }
+
+  .gallery-images > img:hover {
+    border-radius: 2.5rem;
+    transform: scale(0.95);
+  }
+}
