@@ -8,10 +8,21 @@
   margin: 5vw;
 }
 
+.no-documents {
+  grid-template-areas:
+    "info"
+    "responsabilities";
+}
+
 @media (min-width: 1280px) {
   .project-information {
     grid-template-areas: "info responsabilities documents";
     grid-template-columns: 5fr 3fr 3fr;
+  }
+
+  .no-documents {
+    grid-template-areas: "info responsabilities";
+    grid-template-columns: 8fr 3fr;
   }
 }
 
