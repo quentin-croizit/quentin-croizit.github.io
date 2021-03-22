@@ -33,6 +33,12 @@
 
   border: 0px !important;
   border-radius: 0rem !important;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .lightbox-blocker {
@@ -52,4 +58,8 @@
   height: 0px !important;
   width: 0px !important;
   position: fixed !important;
+}
+
+.image-cover:hover {
+  cursor: pointer;
 }

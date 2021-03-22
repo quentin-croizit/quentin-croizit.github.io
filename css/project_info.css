@@ -78,6 +78,10 @@
   padding-left: 0.5rem;
 }
 
+.documents-list > p > a {
+  color: #658ec6;
+}
+
 .gallery {
   display: grid;
   grid-gap: 0.5rem;
