@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quentin Croizit | Game Designer - UX/UI Designer</title>
+
+    <link rel="stylesheet" href="../css/home_header.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/category.css" />
+    <link rel="stylesheet" href="../css/item.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    
+    <link rel="icon" href="./img/favicon.svg" type="image/svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="dynamicAff.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0149c5b101.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="user glass">
+        <div class="user-main">
+        <img src="./img/me.jpeg" alt="" class="user-photo" />
+        <div class="user-name sub-glass">
+          <h3>Quentin Croizit</h3>
+          <p>
+            Game Design <br />
+            UI/UX Design
+          </p>
+        </div>
+        </div>
+        <div class="user-desc weak-glass">
+          <h3>Quentin Croizit</h3>
+          <p> 20 years old with dreams that studies Game Design at Isart Digital Paris</p>
+        </div>
+      </div>
+      <div class="sponsored glass">
+        <img
+          src="./img/logo_blocked.png"
+          alt=""
+          class="sponsored-photo"
+        />
+        <div class="sponsored-desc sub-glass">
+          <h3>Latest Project</h3>
+          <h4>Don't Get Blocked</h4>
+          <p>Tabletop-Strategy Game</p> 
+        </div> 
+      </div>
+    </div>
+    <div class="categories">
+      <div class="realeased glass">
+        <div class="category-title sub-glass" onclick="releasedAff()">
+          <h2>Released Games</h2>
+          <object
+            class="category-arrow"
+            type="image/svg+xml"
+            data="./img/full_arrow.svg"
+          ></object>
+        </div>
+        <div class="items hidden-items" id="released-items">
+
+          <div class="item weak-glass" onclick="window.open('https://www.casciore.com/the-finger-cutters/');">
+            <img src="./img/logo_fingers.jpg" alt="" class="item-photo" onclick="window.open('https://www.casciore.com/the-finger-cutters/');"/>
+            <div class="item-desc">
+              <h4>The Finger Cutters</h4><hr>
+              <p>Hyper-Casual Game </br><i>for Android & iOS</i></p>
+            </div>
+            <button onclick="window.open('https://www.casciore.com/the-finger-cutters/');" class="item-more weak-glass"><h3><i class="fas fa-external-link-alt"></i></h3></button>
+          </div>
+
+        </div>
+      </div>
+      <div class="school glass">
+        <div class="category-title sub-glass" onclick="schoolAff()">
+          <h2>School Projects</h2>
+          <object
+            class="category-arrow"
+            type="image/svg+xml"
+            data="./img/full_arrow.svg"
+          ></object>
+        </div>
+        <div class="items hidden-items" id="school-items">
+
+          <div class="item weak-glass" onclick="window.location.href='/projectfmv/';">
+            <img src="./img/logo_fmv.png" alt="" class="item-photo" onclick="window.location.href='/projectfmv/';"/>
+            <div class="item-desc">
+              <h4>Project FMV</h4><hr>
+              <p>FMV Game </br><i>for PC</i></p>
+            </div>
+            <button onclick="window.location.href='/projectfmv/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+
+          <div class="item weak-glass" onclick="window.open('https://leocompe.itch.io/expedition-014');">
+            <img src="./img/logo_expedition.png" alt="" class="item-photo" onclick="window.open('https://leocompe.itch.io/expedition-014');"/>
+            <div class="item-desc">
+              <h4>expedition_014</h4><hr>
+              <p>Open World </br> <i>for PC</i></p>
+            </div>
+            <button onclick="window.open('https://leocompe.itch.io/expedition-014');" class="item-more weak-glass"><h3><i class="fas fa-external-link-alt"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.location.href='/perfectdodge/';">
+            <img src="./img/logo_neon.png" alt="" class="item-photo" onclick="window.location.href='/perfectdodge/';"/>
+            <div class="item-desc">
+              <h4>Perfect Dodge</h4><hr>
+              <p>Free-to-Play </br> <i>for Android</i></p>
+            </div>
+            <button onclick="window.location.href='/perfectdodge/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.location.href='/wackycompany/';">
+            <img src="./img/logo_wacky.png" alt="" class="item-photo" onclick="window.location.href='/wackycompany/';"/>
+            <div class="item-desc">
+              <h4>Wacky Company</h4><hr>
+              <p>Makey-Makey </br> <i>for PC</i></p>
+            </div>
+            <button onclick="window.location.href='/wackycompany/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.location.href='/toybox/';">
+            <img src="./img/logo_toybox.png" alt="" class="item-photo" onclick="window.location.href='/toybox/';"/>
+            <div class="item-desc">
+              <h4>ToyBox</h4><hr>
+              <p>Interactive Story </br> <i>for Android</i></p>
+            </div>
+            <button onclick="window.location.href='/toybox/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.location.href='/elementaltower/';">
+            <img src="./img/logo_tower.png" alt="" class="item-photo" onclick="window.location.href='/elementaltower/';"/>
+            <div class="item-desc">
+              <h4>Elemental Tower</h4><hr>
+              <p>3D Brawler </br> <i>for PC</i></p>
+            </div>
+            <button onclick="window.location.href='/elementaltower/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.location.href='/thecakeisalive/';">
+            <img src="./img/logo_tcia.png" alt="" class="item-photo" onclick="window.location.href='/thecakeisalive/';"/>
+            <div class="item-desc">
+              <h4>The Cake is Alive</h4><hr>
+              <p>Stealth Game </br> <i>for PC</i></p>
+            </div>
+            <button onclick="window.location.href='/thecakeisalive/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.location.href='/spacebattle/';">
+            <img src="./img/logo_spacebattle.png" alt="" class="item-photo" onclick="window.location.href='/spacebattle/';"/>
+            <div class="item-desc">
+              <h4>Space Battle</h4><hr>
+              <p>One Button Game </br> <i>for PC</i></p>
+            </div>
+            <button onclick="window.location.href='/spacebattle/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.location.href='/betesdencheres/';">
+            <img src="./img/logo_betes.jpg" alt="" class="item-photo" onclick="window.location.href='/betesdencheres/';"/>
+            <div class="item-desc">
+              <h4>Bêtes d'Enchères</h4><hr>
+              <p>Card Game </br> <i>for Tabletop</i></p>
+            </div>
+            <button onclick="window.location.href='/betesdencheres/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+
+        </div>
+      </div>
+      <div class="gamejam glass">
+        <div class="category-title sub-glass" onclick="gamejamAff()">
+          <h2>Game-Jams</h2>
+          <object
+            class="category-arrow"
+            type="image/svg+xml"
+            data="./img/full_arrow.svg"
+          ></object>
+        </div>
+        <div class="items hidden-items" id="gamejam-items">
+
+          <div class="item weak-glass" onclick="window.open('https://quentin-croizit.itch.io/dontgetblocked');">
+            <img src="./img/logo_blocked.png" alt="" class="item-photo" onclick="window.open('https://quentin-croizit.itch.io/dontgetblocked');"/>
+            <div class="item-desc">
+              <h4>Don't Get Blocked</h4><hr>
+              <p>Strategy Game</br> <i>for Tabletop</i></p>
+            </div>
+            <button onclick="window.open('https://quentin-croizit.itch.io/dontgetblocked');" class="item-more weak-glass"><h3><i class="fas fa-external-link-alt"></i></h3></button>
+          </div>
+
+          <div class="item weak-glass" onclick="window.open('https://bursting.itch.io/sweepdreams');">
+            <img src="./img/logo_sweepdreams.png" alt="" class="item-photo" onclick="window.open('https://bursting.itch.io/sweepdreams');"/>
+            <div class="item-desc">
+              <h4>Sweep Dreams Inc.</h4><hr>
+              <p>Rogue-Lite </br> <i>for PC</i></p>
+            </div>
+            <button onclick="window.open('https://bursting.itch.io/sweepdreams');" class="item-more weak-glass"><h3><i class="fas fa-external-link-alt"></i></h3></button>
+          </div>
+
+          <div class="item weak-glass" onclick="window.open('https://quentin-croizit.itch.io/last-pictures');">
+            <img src="./img/logo_picture.png" alt="" class="item-photo" onclick="window.open('https://quentin-croizit.itch.io/last-pictures');"/>
+            <div class="item-desc">
+              <h4>Last Pictures</h4><hr>
+              <p>Point'n'Click </br> <i>for PC</i></p>
+            </div>
+            <button onclick="window.open('https://quentin-croizit.itch.io/last-pictures');" class="item-more weak-glass"><h3><i class="fas fa-external-link-alt"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.open('https://quentin-croizit.itch.io/vines');">
+            <img src="./img/logo_vines.png" alt="" class="item-photo" onclick="window.open('https://quentin-croizit.itch.io/vines');"/>
+            <div class="item-desc">
+              <h4>Vines</h4><hr>
+              <p>Casual Game </br> <i>for PC</i></p>
+            </div>
+            <button onclick="window.open('https://quentin-croizit.itch.io/vines');" class="item-more weak-glass"><h3><i class="fas fa-external-link-alt"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.open('https://quentin-croizit.itch.io/candela');">
+            <img src="./img/logo_candela.png" alt="" class="item-photo" onclick="window.open('https://quentin-croizit.itch.io/candela');"/>
+            <div class="item-desc">
+              <h4>candela</h4><hr>
+              <p>Experimental Game </br> <i>for PC</i></p>
+            </div>
+            <button onclick="window.open('https://quentin-croizit.itch.io/candela');" class="item-more weak-glass"><h3><i class="fas fa-external-link-alt"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.open('https://globalgamejam.org/2020/games/repair-brothers-8');">
+            <img src="./img/logo_repair.png" alt="" class="item-photo" onclick="window.open('https://globalgamejam.org/2020/games/repair-brothers-8');"/>
+            <div class="item-desc">
+              <h4>Repair Brothers</h4><hr>
+              <p>Co-Op Game </br> <i>for PC</i></p>
+            </div>
+            <button onclick="window.open('https://globalgamejam.org/2020/games/repair-brothers-8');" class="item-more weak-glass"><h3><i class="fas fa-external-link-alt"></i></i></h3></button>
+          </div>
+
+          <div class="item weak-glass" onclick="window.open('https://juliendn.itch.io/cellule');">
+            <img src="./img/logo_cellule.png" alt="" class="item-photo" onclick="window.open('https://juliendn.itch.io/cellule');"/>
+            <div class="item-desc">
+              <h4>cellule</h4><hr>
+              <p>Story-Driven Game </br> <i>for PC</i></p>
+            </div>
+            <button onclick="window.open('https://juliendn.itch.io/cellule');" class="item-more weak-glass"><h3><i class="fas fa-external-link-alt"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.open('https://juliendn.itch.io/pancakes');">
+            <img src="./img/logo_pancakes.png" alt="" class="item-photo" onclick="window.open('https://juliendn.itch.io/pancakes');"/>
+            <div class="item-desc">
+              <h4>Pancakes</h4><hr>
+              <p>Hyper-Casual Game </br> <i>for Android</i></p>
+            </div>
+            <button onclick="window.open('https://juliendn.itch.io/pancakes');" class="item-more weak-glass"><h3><i class="fas fa-external-link-alt"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.open('https://scratch.mit.edu/projects/168298704/');">
+            <img src="./img/logo_spaceship.png" alt="" class="item-photo" onclick="window.open('https://scratch.mit.edu/projects/168298704/');"/>
+            <div class="item-desc">
+              <h4>Spaceship</h4><hr>
+              <p>Rogue-Lite </br> <i>for PC</i></p>
+            </div>
+            <button onclick="window.open('https://scratch.mit.edu/projects/168298704/');" class="item-more weak-glass"><h3><i class="fas fa-external-link-alt"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.location.href='/peasantwar/';">
+            <img src="./img/logo_peasant.jpg" alt="" class="item-photo" onclick="window.location.href='/peasantwar/';"/>
+            <div class="item-desc">
+              <h4>Peasant War</h4><hr>
+              <p>Card Game </br> <i>for Tabletop</i></p>
+            </div>
+            <button onclick="window.location.href='/peasantwar/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+
+        </div>
+      </div>
+      <div class="prototypes glass">
+        <div class="category-title sub-glass" onclick="prototypesAff()">
+          <h2>Prototypes & Tests</h2>
+          <object
+            class="category-arrow"
+            type="image/svg+xml"
+            data="./img/full_arrow.svg"
+          ></object>
+        </div>
+        <div class="items hidden-items" id="prototypes-items">
+
+          <div class="item weak-glass" onclick="window.location.href='/revealinglens/';">
+            <img src="./img/logo_lens.png" alt="" class="item-photo" onclick="window.location.href='/revealinglens/';"/>
+            <div class="item-desc">
+              <h4>Revealing Lens</h4><hr>
+              <p>Hand-Written Shaders</br><i> in Unity</i></p>
+            </div>
+            <button onclick="window.location.href='/revealinglens/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+
+          <div class="item weak-glass" onclick="window.location.href='/displacementroad/';">
+            <img src="./img/logo_displacement.png" alt="" class="item-photo" onclick="window.location.href='/displacementroad/';"/>
+            <div class="item-desc">
+              <h4>Displacement Road</h4><hr>
+              <p>Google Maps Controls </br><i>recreated in Unity</i></p>
+            </div>
+            <button onclick="window.location.href='/displacementroad/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+          
+          <div class="item weak-glass" onclick="window.location.href='/pitchblack/';">
+            <img src="./img/logo_pitch.png"" alt="" class="item-photo" onclick="window.location.href='/pitchblack/';"/>
+            <div class="item-desc">
+              <h4>Pitch Black</h4><hr>
+              <p>Testing the new </br><i>Unity Input System</i></p>
+            </div>
+            <button onclick="window.location.href='/pitchblack/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="other glass">
+        <div class="category-title sub-glass" onclick="otherAff()">
+          <h2>Other projects</h2>
+          <object
+            class="category-arrow"
+            type="image/svg+xml"
+            data="./img/full_arrow.svg"
+          ></object>
+        </div>
+        <div class="items hidden-items" id="other-items">
+
+          <div class="item weak-glass" onclick="window.location.href='/website/';">
+            <img src="./img/logo_website.png" alt="" class="item-photo" onclick="window.location.href='/website/';"/>
+            <div class="item-desc">
+              <h4>My portfolio</h4><hr>
+              <p>This website </br><i>in HTML, CSS and JS</i></p>
+            </div>
+            <button onclick="window.location.href='/website/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+
+          <div class="item weak-glass" onclick="window.location.href='/ladiscussion/';">
+            <img src="./img/logo_discussion.png" alt="" class="item-photo" onclick="window.location.href='/ladiscussion/';"/>
+            <div class="item-desc">
+              <h4>La Discussion</h4><hr>
+              <p>A live podcast </br><i>about GD on Twitch</i></p>
+            </div>
+            <button onclick="window.location.href='/ladiscussion/';" class="item-more weak-glass"><h3><i class="fas fa-info"></i></h3></button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="glass">
+      <div class="footer-links">
+        <a target="_self" href="../" class="fas fa-home"> </a>
+        <a
+          target="_self"
+          href="/about/"
+          class="fas fa-user"
+        ></a>
+        <hr class="link-separator" />
+        <a
+          target="_blank"
+          href="https://twitter.com/EDJ_Antimatter"
+          class="fab fa-twitter"
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/q-a-croizit/"
+          class="fab fa-linkedin-in"
+        ></a>
+        <a
+          target="_blank"
+          href="https://quentin-croizit.itch.io/"
+          class="fab fa-itch-io"
+        ></a>
+        <a
+          target="_blank"
+          href="mailto:quentin.croizit@gmail.com"
+          class="fas fa-envelope"
+        ></a>
+      </div>
+      <!-- <p class="footer-navigation">
+            <a href="https://quentin.github.io">Home</a> -
+            <a href="https://quentin.github.io">Student projects</a> -
+            <a href="https://quentin.github.io">Game Jams</a>
+          </p> -->
+      <p class="copyrights">
+        &copy; 2021, Quentin Croizit. All rights reserved<br />
+      </p>
+      <p class="sub-footer">
+        Original Glassmorphism code by
+        <a href="http://youtube.com/c/DevEd">Dev Ed</a>
+      </p>
+    </footer>
+  </body>
+  <script src="learnMore.js"></script>
+</html>
+
