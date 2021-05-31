@@ -18,7 +18,7 @@
       "gamejam school"
       "gamejam prototypes"
       "other prototypes";
-    grid-template-rows: 16.5rem 71rem 26rem auto;
+    grid-template-rows: 16.5rem 80.5rem 16.5rem auto;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5rem;
 
