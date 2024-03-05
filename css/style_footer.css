@@ -1,0 +1,116 @@
+/* footer styling and grid */
+
+footer {
+
+    /* displaying properties */
+    height: var(--section-height-m);
+    justify-content: center;
+    align-content: center;
+
+    /* grid properties */
+    display: grid;
+    gap: 0px; 
+    grid-template-areas: 
+    "about linkedin itch"
+    "legal legal legal"; 
+
+    grid-column-start: span 2;
+}
+
+
+
+
+/* links and legal stylings */
+
+.link-social {
+
+    /* flex properties */
+    justify-self: center;
+    align-self: center;
+
+    /* displaying properties */
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 1rem;
+    width: 16rem;
+    
+    /* text properties */
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--dark-color);
+}
+
+.link-social:hover {
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+.legal {
+    text-align: center;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.legal > a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* changes for large screens */
+
+@media screen and (min-width: 960px) {
+
+    /* hiding carriage return for large screens in legal part */
+    .legal > br {
+        display: none;
+    }
+}
+
+
+
+
+/* changes for small screens */
+
+@media screen and (max-width: 960px) {
+
+    /* changing the footer layout */
+    footer {
+        grid-template-areas: 
+            "about"
+            "linkedin"
+            "itch"
+            "legal";
+
+        height: var(--section-height-l);
+    }
+
+    /* adjusting margin on legal */
+    .legal {
+        margin: 2rem 0 0 0;
+    }
+
+    /* removing a separation point inside the legal */
+    .legal > b {
+        display: none;
+    }
+
+    /* we make the footer only span one column instead of 2 */
+    footer {
+        grid-column-start: span 1;
+    }
+
+}
+
+
+
+
+/* area names for grids */
+
+#about              { grid-area: about;             }
+#linkedin           { grid-area: linkedin;          }
+#itch               { grid-area: itch;              }
+.legal              { grid-area: legal;             }       

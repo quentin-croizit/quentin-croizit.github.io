@@ -1,0 +1,58 @@
+/* commons and variables */
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/JosefinSans.ttf') format('truetype')
+}
+
+*, *:hover, *::after, *::before {
+
+    /* css variables */
+    --transition-speed: 0.25s;
+    --transition-type: ease-out;
+
+    --light-color: antiquewhite;
+    --dark-color: #1e1e1e;
+
+    --section-height-l: 25rem;
+    --section-height-m: 15rem;
+    --section-height-s: 10rem;
+
+    --blur-power: 17px;
+    --text-shadow-properties: 0px 0px 15px var(--dark-color); 
+
+    /* commons */
+    font-family: 'Josefin Sans', sans-serif;
+    color: antiquewhite;
+    transition: all var(--transition-speed);
+    transition-timing-function: var(--transition-type);
+
+    text-decoration: none;
+}
+
+
+
+
+/* body and display are common to all pages as main containers */
+/* those styling are here to maintain a similar structure on all pages of the website */
+
+body, .display {
+    margin: 0; padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark-color);
+}
+
+.display {
+
+    /* displaying properties */
+    max-width: 120rem;
+    flex-grow: 1;
+
+    /* grid properties */
+    display: grid; 
+    gap: 0px;
+}

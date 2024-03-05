@@ -1,0 +1,233 @@
+section {
+    margin: 0;
+    padding: 5rem;
+
+    font-size: 1.25rem;
+}
+
+#description > *, #informations > *, #responsabilities > * {
+    margin: 0; padding: 0;
+}
+
+#description {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+
+#description > #overview {
+    z-index: 99;
+    /* padding: 1.5rem; */
+    
+    margin: 0;
+    height: 100%;
+
+    position: relative;
+}
+
+#overview {
+    overflow: hidden;
+}
+
+#overview > div {
+    margin: 0 0 0 2rem;
+    height: 100%;
+    width: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: var(--text-shadow-properties);
+}
+
+
+#overview > div > h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+    margin: 0.5rem 0;
+    transform: translateY(0.25rem);
+}
+
+.back-image::after {
+    z-index: -99;
+    background-image: var(--back);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    content: " ";
+    display: block;
+    position: relative;
+    transform: translateY(-100%) scale(1.1);
+    opacity: 0.5;
+
+    filter: contrast(0.5) brightness(1) blur(3px);
+}
+
+.back-image.top::after {
+    background-position:top;
+}
+
+u {
+    font-size: 0.6em;
+    opacity: 0.7;
+}
+
+#description > p {
+    margin-top: 2rem;
+    margin-bottom: .25rem;
+    height: min-content;
+    text-align: left;
+}
+
+#description > p > a {
+    text-decoration: underline;
+}
+
+#description > p:not(:last-child) {
+    margin: 0 0 1.5rem 0;
+}
+
+#informations {
+    padding-left: 0 !important;
+}
+
+#responsabilities {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(20rem, 1fr) );
+    gap: 5rem;
+}
+
+#responsabilities > div:first-child {
+    overflow: hidden;
+    grid-row: span 2;
+    text-shadow: var(--text-shadow-properties);
+}
+
+#responsabilities > div:first-child.small {
+    grid-row: span 1 !important;
+}
+
+.container > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > div > h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    margin: 0.5rem 0;
+    transform: translateY(0.25rem);
+}
+
+.container:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+}
+
+.container > h3 {
+    margin: 0 0 1rem 0;
+}
+
+.container > p {
+    margin: 0;
+}
+
+.type {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.value {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+hr {
+    margin: 1rem 0 !important;
+}
+
+.display {
+    grid-template-columns: 70% 30%;
+    /* grid-template-rows: var(--section-height-l) var(--section-height-l) var(--section-height-l); */
+}
+
+
+.gallery {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr );
+    grid-template-columns: repeat( auto-fit, minmax(30rem, 1fr) );
+    padding-bottom: 0 !important;
+}
+
+.gallery > img {
+    width: 100%;
+}
+
+.value > a::after {
+    content: " ⮩";
+    line-height: 1em;
+    font-size: .75em;
+}
+
+.value:has(a):hover {
+    text-decoration: underline;
+}
+
+
+
+/* changes for small screens */
+
+@media screen and (max-width: 960px) {
+
+    /* changing for a on column layout */
+    .display {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 3rem;
+    }
+
+    #overview > div {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    #overview > div > h2 {
+        text-align: center !important;
+    }
+
+    #description > p {
+        margin-bottom: 0rem !important;
+    }
+
+    #informations {
+        padding-top: 0rem !important;
+        padding-left: 3rem !important;
+    }
+
+    #responsabilities {
+        grid-column: span 1;
+        gap: 2rem;
+        grid-template-columns: 1fr
+    }
+
+    .container:not(:first-child) {
+        padding: 0.5rem 0 !important;
+    }
+
+    .gallery {
+        grid-column: span 1;
+        grid-template-columns: 1fr;
+    }
+}
