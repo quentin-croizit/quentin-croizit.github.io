@@ -5,16 +5,13 @@
 }
 
 section {
-    margin: 0;
     padding: 5rem;
 
     font-size: 1.25rem;
 }
 
 
-
-
-#description > *, #informations > *:not(hr), #responsabilities > * {
+#description > *, #informations > *:not(hr) {
     margin: 0; padding: 0;
 }
 
@@ -23,21 +20,17 @@ section {
     font-weight: 700;
 }
 
-
-
-
 *:has( > .category-name) {
-    margin: 0 0 0 2rem;
-    width: min-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    width: 100%;
 }
 
 .category-name {
     font-size: 2.5rem;
     font-weight: 700;
-    margin: 0;
     text-align: left;
     margin: 0.5rem 0;
     transform: translateY(0.25rem);
@@ -47,22 +40,12 @@ section {
 
 
 
-
-
-
+/* overview */
 
 #description {
     text-align: justify;
     display: flex;
     flex-direction: column;
-}
-
-.back-image > div {
-    z-index: 99;
-    
-    height: 100%;
-
-    position: relative;
 }
 
 #description > p {
@@ -83,15 +66,17 @@ section {
 
 
 
-
-
+/* background images for overviews and roles */
 
 .back-image {
     overflow: hidden;
     height: 100%;
 }
 
-
+.back-image > div {
+    height: 100%;
+    position: relative;
+}
 
 .back-image::after {
     z-index: -99;
@@ -116,36 +101,19 @@ section {
 
 
 
-#responsabilities {
+
+/* responsibilities */
+
+#responsibilities {
     grid-column: span 2;
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(20rem, 1fr) );
     gap: 5rem;
 }
 
-#responsabilities > div:first-child {
-    overflow: hidden;
-    grid-row: span 2;
-    text-shadow: var(--text-shadow-properties);
+#responsibilities > div:first-child {
+    grid-row: span var(--size);
 }
-
-#responsabilities > div:first-child.small {
-    grid-row: span 1 !important;
-}
-
-.container > div {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* .container:not(:first-child) {
-    display: flex;
-    flex-direction: column;
-} */
 
 .container > h3 {
     margin: 0 0 1rem 0;
@@ -158,21 +126,10 @@ section {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/*informations */
+/*informations*/
 
 #informations {
-    padding-left: 0 !important;
+    padding-left: 0;
 }
 
 hr {
@@ -204,14 +161,12 @@ hr {
     display: grid;
     grid-template-columns: repeat( 3, 1fr );
     grid-template-columns: repeat( auto-fit, minmax(30rem, 1fr) );
-    padding-bottom: 0 !important;
+    padding-bottom: 0;
 }
 
 .gallery > img {
     width: 100%;
 }
-
-
 
 
 
@@ -229,32 +184,23 @@ hr {
         padding: 3rem;
     }
 
-    #overview > div {
-        width: 100%;
-        margin: 0 !important;
-    }
-
-    #overview > div > h2 {
-        text-align: center !important;
-    }
-
     #description > p {
-        margin-bottom: 0rem !important;
+        margin-bottom: 0rem;
     }
 
     #informations {
-        padding-top: 0rem !important;
-        padding-left: 3rem !important;
+        padding-top: 0rem;
+        padding-left: 3rem;
     }
 
-    #responsabilities {
+    #responsibilities {
         grid-column: span 1;
         gap: 2rem;
         grid-template-columns: 1fr
     }
 
     .container:not(:first-child) {
-        padding: 0.5rem 0 !important;
+        padding: 0.5rem 0;
     }
 
     .gallery {
