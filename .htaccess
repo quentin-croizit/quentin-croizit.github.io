@@ -1,2 +1,2 @@
-ErrorDocument 404 / 404.html
-Redirect 301 "/sanfrancisco" "https://quentin-croizit.itch.io/francis-and-co"
+RewriteEngine On
+Redirect 301 https://quentin-croizit.github.io/sanfrancisco https://quentin-croizit.itch.io/francis-and-co
