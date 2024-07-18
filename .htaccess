@@ -1,1 +1,2 @@
 ErrorDocument 404 / 404.html
+Redirect 301 "/sanfrancisco" "https://quentin-croizit.itch.io/francis-and-co"
