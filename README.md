@@ -1,14 +1,12 @@
 # Github Pages - Personnal Portfolio
 
-Welcome to my personal website/portfolio! This project is designed to be as flexible as possible and easy-to-read. Feel free to explore the code, reuse it, and modify it according to your needs.
+Welcome to my personal website/portfolio! This project is designed to be flexible and easy-to-read. Feel free to explore the code, reuse it, and modify it according to your needs.
 
 Please note that while the code is freely available, it is not licensed under any specific license. Still, the it is free to use and modify without any restrictions. However, please keep in mind that certain non-code assets such as images, videos, and other data may be subject to specific licenses and restrictions, which may limit their free use. It is advisable to review the licensing information associated with each asset before utilizing them.
 
 ## Features
 
-- Flexible structure: The website's structure is designed to be as flexible as possible, allowing for easy customization and adaptation to different needs.
 - Simplicity-focused: I prioritized simplicity in the design and functionality of the website.
-- No JavaScript: The website functions without any reliance on JavaScript, ensuring accessibility and simplicity.
 - Cross-browser : Most of the code is supported by most of the browsers, which ensures a maximum compatibility.
 
 ## Getting Started
