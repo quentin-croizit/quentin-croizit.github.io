@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg">
+    <title>Quentin C • Redirecting</title>
+    <link rel="stylesheet" href="css/style_main.css">
+</head>
+<body style="width: 100%; height: 100%;"> </body>
+</html>
+
+
+<script>
+
+    // Since Github Pages doesn't support .htaccess files, the 404 page is used
+    // with some javascript to create a simple shortcut-based url redirecting 
+
+    // Note that : Github Pages uses Jekyll so any page not found is redirected
+    // to the 404.html in root directory. Since the url itself is not changed,
+    // we can check for it, allowing us to do this trickery.
+
+    // The custom_links dictionnary allows for keys (custom links) and items
+    // (links to redirect to).
+
+    let custom_links =  {
+                            "htc" :             "projects/hidethecorpse.html",
+                            "sanfrancisco" :    "projects/francisandco.html",
+                            "fmv" :             "projects/filtres.html"
+                        }
+
+    let base_url_regex = /.+\//ig;
+    let base_url = window.location.href.match(base_url_regex);
+
+    let link = window.location.href.replaceAll(base_url, "");
+
+    new_link = custom_links[link];
+    if (new_link == undefined) new_link = "";
+
+    window.location = base_url + new_link;
+    
+</script>
+
+
+<!--  <a href="mailto:hello@hello.com?subject=Email Subject&body=Contents of email">hello@hello.com</a> -->
