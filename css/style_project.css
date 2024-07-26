@@ -1,0 +1,210 @@
+/* common stuff */
+
+.display {
+    grid-template-columns: 70% 30%;
+}
+
+section {
+    padding: 5rem;
+
+    font-size: 1.25rem;
+}
+
+
+#description > *, #informations > *:not(hr) {
+    margin: 0; padding: 0;
+}
+
+.value, .role {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+*:has( > .category-name) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.category-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: left;
+    margin: 0.5rem 0;
+    transform: translateY(0.25rem);
+    text-shadow: var(--text-shadow-properties);
+}
+
+
+
+
+/* overview */
+
+#description {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+
+#description > p {
+    margin-top: 2rem;
+    margin-bottom: .25rem;
+    height: min-content;
+    text-align: left;
+}
+
+#description > p > a {
+    text-decoration: underline;
+}
+
+#description > p:not(:last-child) {
+    margin: 0 0 1.5rem 0;
+}
+
+
+
+
+/* background images for overviews and roles */
+
+.back-image {
+    overflow: hidden;
+    height: 100%;
+}
+
+.back-image > div {
+    height: 100%;
+    position: relative;
+}
+
+.back-image::after {
+    z-index: -99;
+    background-image: var(--back);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    content: " ";
+    display: block;
+    position: relative;
+    transform: translateY(-100%) scale(1.1);
+    opacity: 0.5;
+
+    filter: contrast(0.5) brightness(1) blur(3px);
+}
+
+.back-image.top::after {
+    background-position:top;
+}
+
+
+
+
+/* responsibilities */
+
+#responsibilities {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(20rem, 1fr) );
+    gap: 5rem;
+}
+
+#responsibilities > div:first-child {
+    grid-row: span var(--size);
+}
+
+.container > h3 {
+    margin: 0 0 1rem 0;
+}
+
+.container > p {
+    margin: 0;
+}
+
+
+
+
+/*informations*/
+
+#informations {
+    padding-left: 0;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+.type {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.value > a::after {
+    content: " ⮩";
+    line-height: 1em;
+    font-size: .75em;
+}
+
+.value:has(a):hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* gallery and images */
+
+.gallery {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr );
+    grid-template-columns: repeat( auto-fit, minmax(30rem, 1fr) );
+    padding-bottom: 0;
+}
+
+.gallery > img {
+    width: 100%;
+}
+
+
+
+
+/* changes for small screens */
+
+@media screen and (max-width: 960px) {
+
+    /* changing for a on column layout */
+    .display {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    #description > p {
+        margin-bottom: 0rem;
+    }
+
+    #informations {
+        padding-top: 0rem;
+        padding-left: 2rem;
+    }
+
+    #responsibilities {
+        grid-column: span 1;
+        gap: 2rem;
+        grid-template-columns: 1fr
+    }
+
+    .container:not(:first-child) {
+        padding: 0.5rem 0;
+    }
+
+    .gallery {
+        grid-column: span 1;
+        grid-template-columns: 1fr;
+    }
+}

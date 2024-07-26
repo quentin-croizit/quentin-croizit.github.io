@@ -1,0 +1,90 @@
+header {
+    height: var(--section-height-l);
+    background-color: black;
+    overflow: hidden;
+
+    grid-column-start: span 2;
+}
+
+
+
+
+/* different centering for the background elements */
+
+header.bottom::after   {   background-position: bottom;     }
+header.center::after   {   background-position: center;     }
+header.top::after      {   background-position: top;        }
+
+
+
+
+/* ::after managing */
+
+header::after {
+    background-image: var(--back);
+    content: " ";
+    
+    display: block;
+
+    height: 100%;
+    width: 100%;
+
+    filter: contrast(0.5) brightness(1);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    transform:translateY(-100%);
+}
+
+
+
+
+/* header text displaying */
+
+.header-container {
+    position: relative;
+    z-index: 99;
+    padding: 0 10%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title, #properties {
+    padding: 0;
+    margin: 0;
+    text-shadow: var(--text-shadow-properties);
+}
+
+#title {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+#properties {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+
+/* changes for small screens */
+
+@media screen and (max-width: 960px) {
+
+    /* we make the footer only span one column instead of 2 */  
+
+    header {
+        grid-column-start: span 1;
+    }
+
+    /* we make the title a bit small to make almost all of them fit on one line */
+    
+    #title {
+        font-size: 3rem;
+    }
+}

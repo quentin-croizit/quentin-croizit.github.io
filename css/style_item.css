@@ -1,0 +1,143 @@
+/* all items and items insides common stuff */
+
+.item, .separator, .info, .detail {
+    overflow: hidden;
+}
+
+.separation, .name, .attribut {
+    margin: 0; padding: 0;
+}
+
+
+
+
+/* items including their background images */
+
+.item {
+    height: var(--section-height-l);
+    background-color: black;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.item::after {
+    background-image: var(--back);
+    content: " ";
+    
+    display: block;
+
+    height: 100%;
+    width: 100%;
+
+    filter: contrast(0.5) brightness(1);
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    transform:translateY(-100%);
+}
+
+.item:not(.no-zoom):hover::after {
+    transform: scale(1.25) translateY(-80%);
+    opacity: 0.5;
+}
+
+
+
+
+/* infos and details of section */
+
+.info, .detail {
+    position: relative;
+    z-index: 99;
+
+    display: flex;
+    flex: 1 0;
+    flex-direction: column;
+
+    justify-content: center;
+    padding: 0 10%;
+    text-shadow: var(--text-shadow-properties);
+}
+
+.info {
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    opacity: 1;
+    
+}
+
+.detail {
+    height: 0%;
+    align-items: left;
+    text-align: left;
+    opacity: 0;
+        
+    backdrop-filter: blur(var(--blur-power));
+}
+
+.item:hover > .info {  
+    height: 0%;
+    opacity: 0;
+}
+    
+.item:hover > .detail {
+    height: 100%;
+    opacity: 1;
+}
+
+
+
+
+/* texts inside items */
+
+.name {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.attribut, .separation {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.description {
+    margin: 3rem 0 0 0;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+
+
+
+/* separators between items */
+
+.separator {
+    height: var(--section-height-s);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-column-start: span 2;
+    background-color: var(--dark-color);
+}
+
+
+
+
+/* changes for small screens */
+
+@media screen and (max-width: 960px) {
+
+    /* changing padding for items */
+    .info, .detail {
+        padding: 0 5%;
+    }
+
+    /* making separators span only one column */
+    .separator{
+        grid-column-start: span 1;
+    }
+}
