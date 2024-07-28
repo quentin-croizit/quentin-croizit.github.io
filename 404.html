@@ -32,7 +32,7 @@
                         }
 
 
-    let base_url_regex = /.*\.[a-z]+\//ig;
+    let base_url_regex = /.+?\.(?:[a-z]+)\//i;
     let base_url = window.location.href.match(base_url_regex);
 
     let link = window.location.href.replaceAll(base_url, "");
