@@ -24,11 +24,11 @@
     // (links to redirect to).
 
     let custom_links =  {
-                            "/htc" :             "projects/hidethecorpse.html",
-                            "/sanfrancisco" :    "projects/francisandco.html",
-                            "/fmv" :             "projects/filtres.html",
-                            "/writing" :         "projects/lannee.html",
-                            "/cardgame" :        "projects/pw2.html"
+                            "/htc" :             "/projects/hidethecorpse.html",
+                            "/sanfrancisco" :    "/projects/francisandco.html",
+                            "/fmv" :             "/projects/filtres.html",
+                            "/writing" :         "/projects/lannee.html",
+                            "/cardgame" :        "/projects/pw2.html"
                         }
 
 
@@ -40,7 +40,7 @@
     new_link = custom_links[link];
     if (new_link == undefined) new_link = "";
 
-    window.location = window.location.hostname + new_link;
+    window.location.assign(window.location.hostname + new_link);
     
 </script>
 
