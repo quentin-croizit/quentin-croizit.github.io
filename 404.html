@@ -37,12 +37,12 @@
 
     let base_url = window.location.hostname;
 
-    let link = window.location.href.replaceAll(base_url, "");
+    let link = window.location.pathname;
 
     new_link = custom_links[link];
     if (new_link == undefined) new_link = "";
 
-    window.location = base_url + new_link;
+    window.location = base_url + "/" + new_link;
     
 </script>
 
