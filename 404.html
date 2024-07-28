@@ -28,11 +28,14 @@
                             "sanfrancisco" :    "projects/francisandco.html",
                             "fmv" :             "projects/filtres.html",
                             "writing" :         "projects/lannee.html",
-                            "cardgame" :         "projects/pw2.html"
+                            "cardgame" :        "projects/pw2.html"
                         }
 
-    let base_url_regex = /.+\//ig;
-    let base_url = window.location.href.match(base_url_regex);
+
+    // let base_url_regex = /.+\//ig;
+    // let base_url = window.location.href.match(base_url_regex);
+
+    let base_url = window.location.hostname;
 
     let link = window.location.href.replaceAll(base_url, "");
 
