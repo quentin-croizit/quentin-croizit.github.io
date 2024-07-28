@@ -1,0 +1,30 @@
+/* hides and shows en and fr classes based on the local storage */
+
+body.en .fr {
+    display: none;
+}
+
+body.fr .en {
+    display: none;
+}
+
+
+
+
+/* style for the switch button */
+
+#lang {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 30px;
+
+    border-radius: 15px;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    z-index: 100;
+}

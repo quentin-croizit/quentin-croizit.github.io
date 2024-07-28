@@ -9,16 +9,28 @@
     <link rel="stylesheet" href="css/style_header.css">
     <link rel="stylesheet" href="css/style_item.css">
     <link rel="stylesheet" href="css/style_footer.css">
+    <link rel="stylesheet" href="css/style_lang.css">
+    <link rel="stylesheet" href="css/style_lang.css">
 </head>
+
 <body>
+
+    <script type="text/javascript" src="js/lang.js"></script>
+    <input id="lang" type="button" value="clickme" onclick="switchLang();" />
+
     <div class="display">
         <header class="center" style="--back : url('../img/covers/profile.jpg');">
             <div class="header-container">
                 <h1 id="title">Quentin Croizit</h1>
-                <h2 id="properties">
+                <h2 id="properties" class="en">
                     📝 Game Designer<br>
                     🛠️ Jack-of-all-trades<br>
                     📓 Author (kinda)
+                </h2>
+                <h2 id="properties" class="fr">
+                    📝 Game Designer<br>
+                    🛠️ Couteau Suisse<br>
+                    📓 Auteur (en quelques sortes)
                 </h2>
             </div>
         </header>
@@ -28,7 +40,8 @@
         <a class="item" style="--back : url('../img/items/pw2.jpg');" href="projects/pw2.html">
             <div class="info">
                 <h2 class="name">PW2</h2>
-                <h3 class="attribut">City-Building Card Game</h3>
+                <h3 class="attribut fr">Jeu de Construction de Ville</h3>
+                <h3 class="attribut en">City-Building Card Game</h3>
             </div>
             <div class="detail">
                 <h2 class="name">PW2</h2>
