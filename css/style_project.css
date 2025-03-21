@@ -126,6 +126,32 @@ section {
 
 
 
+/* additional notes */
+
+#notes {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(35rem, 1fr) );
+    gap: 5rem;
+}
+
+#notes > div  {
+    display: flex;
+    gap: 2.5rem;
+    flex-direction: column;
+}
+
+#notes > div > :first-child {
+    min-height: 6.5rem;
+}
+
+#notes > div > p {
+    margin: 0;
+}
+
+
+
+
 /*informations*/
 
 #informations {
@@ -194,6 +220,12 @@ hr {
     }
 
     #responsibilities {
+        grid-column: span 1;
+        gap: 2rem;
+        grid-template-columns: 1fr
+    }
+
+    #notes {
         grid-column: span 1;
         gap: 2rem;
         grid-template-columns: 1fr
